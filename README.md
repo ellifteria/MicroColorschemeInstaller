@@ -1,10 +1,10 @@
 # Micro Colorscheme Installer
 
-Automatically moves micro colorschemes to proper directory.
+Automatically moves micro colorschemes to proper directory on macOS.
 
 ## Usage
 
 ```bash
-cc install_scheme.c -o install_scheme
-./install_scheme <RELATIVE_PATH_TO_SCHEME> [SCHEME_FILENAME=RELATIVE_PATH_TO_SCHEME]
+cc install_scheme.c -o instllschm
+./instlschm <RELATIVE_PATH_TO_SCHEME> [SCHEME_FILENAME=RELATIVE_PATH_TO_SCHEME]
 ```
