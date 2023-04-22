@@ -1,6 +1,6 @@
 # Micro Colorscheme Installer
 
-Automatically moves micro colorschemes to proper directory
+Automatically moves micro colorschemes to proper directory.
 
 ## Usage
 
