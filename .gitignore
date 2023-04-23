@@ -1,5 +1,6 @@
 .DS_Store
 
-local-themes
+local-themes/*
+!local-themes/README.md
 
-instlschm
+instllschm
