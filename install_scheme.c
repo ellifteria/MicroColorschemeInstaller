@@ -9,33 +9,37 @@
 #define LENGTH_MESSAGE		"%s: error: total file path exceeds 100 characters; please limit PATH_TO_COLOR_SCHEME to %lu characters\n"
 #define FILE_OPEN_MESSAGE	"%s: error: failed to open file: %s\n"
 
-#define PATH_LENGTH		123
+#define PATH_LENGTH	123
+
+#ifndef USER
+#	define USER "root"
+#endif
 
 int main(int argc, char* argv[]) {
 
 	// check num args
-	if (argc < 3) {
+	if (argc < 2) {
 		fprintf(stderr, USAGE_MESSAGE, argv[0]);
 		return 1;
 	}
 
 	// check if --help
-	if (argc >= 3 && strcmp(argv[1], "--help") == 0) {
+	if (argc >= 2 && strcmp(argv[1], "--help") == 0) {
 		fprintf(stderr, USAGE_MESSAGE, argv[0]);
 		return 2;
 	}
 
 	// initialize paths
-	char* clr_schm = argv[2];
+	char* clr_schm = argv[1];
 	
 	char* instl_file;
-	if (argc == 4) {
-		instl_file = argv[3];
-	} else {
+	if (argc == 3) {
 		instl_file = argv[2];
+	} else {
+		instl_file = argv[1];
 	}
 	char instl_dir[PATH_LENGTH] = "/Users/";
-	strcat(instl_dir, argv[1]);
+	strcat(instl_dir, USER);
 	strcat(instl_dir, "/.config/micro/colorschemes/");
 	
 
